@@ -6,8 +6,9 @@ include('Menu.class.php');
 
 <head>
 	<meta charset="UTF-8">
-	<title>Realizar Pedido Online</title>
-	<h1>Comedor 22 de Diciembre</h1>
+	<link href="estilo.css" rel="stylesheet">
+	<script src="script.js" type="text/javascript"></script>
+	<title>Realizar Pedido</title>
 	<script>
 		/*
 		idElemento: Parametro opcional -> Se necesita obtener el valor de un elemento HTML para armar el queryString
@@ -44,10 +45,11 @@ include('Menu.class.php');
 </head>
 
 <body>
+	<h1>Comedor 22 de Diciembre</h1>
 	<section>
 		<article>
-			<h4>Realizar Pedido Online</h4>
-            <label>Seleccione un Item de Venta para realizar el pedido:</label>
+			<h3>Realizar Pedido Online</h3>
+            <label>Elegir Item:</label>
 			
             <select id="idCmbItemsVenta" name="cmbItemsVenta" onChange="realizarPeticionGET('idCmbItemsVenta', 'buscar_ItemsVenta.php?nombrePlatillo=', 'mostrarInfoItemVenta');">
                 <option value="0">---</option>
@@ -58,7 +60,8 @@ include('Menu.class.php');
 					}
                 ?>
             </select>
-
+			<p id="cantPed">Cantidad <input id="inpCant" type="number" min='1' max='25' required></p>
+			<button onclick='cargarDatosPedido()'>Realizar Pedido</button>
             <div id="idDivDatosPedido"></div>
 			
             
