@@ -6,8 +6,8 @@ include('Menu.class.php');
 
 <head>
 	<meta charset="UTF-8">
-	<title>Realizar Pedido</title>
-	<script src="armarGrilla.js"></script>
+	<title>Realizar Pedido Online</title>
+	<h1>Comedor 22 de Diciembre</h1>
 	<script>
 		/*
 		idElemento: Parametro opcional -> Se necesita obtener el valor de un elemento HTML para armar el queryString
@@ -30,7 +30,10 @@ include('Menu.class.php');
 	
 		function mostrarInfoItemVenta(){
 			//Mostrar informacion asociada al item de venta seleccionado 
-			console.log("Info");
+			if ((peticion.readyState == 4) && (peticion.status == 200)) {
+				var contenedorInfo = document.getElementById("idDivDatosPedido");	
+
+			}
 		}
 		
 		
@@ -43,7 +46,7 @@ include('Menu.class.php');
 <body>
 	<section>
 		<article>
-			<h4>Comedor 22 de Diciembre</h4>
+			<h4>Realizar Pedido Online</h4>
             <label>Seleccione un Item de Venta para realizar el pedido:</label>
 			
             <select id="idCmbItemsVenta" name="cmbItemsVenta" onChange="realizarPeticionGET('idCmbItemsVenta', 'buscar_ItemsVenta.php?nombrePlatillo=', 'mostrarInfoItemVenta');">

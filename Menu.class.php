@@ -25,6 +25,10 @@ class Menu
         return $listaProductos;
     }
 
+    public static function getItemVenta($idItemVenta){
+        //Se obtiene el ItemVenta asociado con su id (info)
+    }
+
     
 }
 ?>
