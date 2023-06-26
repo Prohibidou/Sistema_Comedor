@@ -41,7 +41,7 @@ include('Menu.class.php');
 
 		/**/
 	</script>
-	<!-- <link rel="stylesheet" href="styles.css"> --> 
+	 <link rel="stylesheet" href="st.css"> 
 </head>
 
 <body>
